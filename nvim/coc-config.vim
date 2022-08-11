@@ -19,3 +19,17 @@ inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
 " <C-g>u breaks current undo, please make your own choice.
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
+" Peek definition
+nnoremap <silent><nowait> <C-g> :call CocAction('jumpDefinition', v:false)<CR>
+
+" GoTo code navigation.
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+autocmd CursorHold * silent call CocActionAsync('highlight')
+
+inoremap <expr> <A-j> coc#pum#visible() ? coc#pum#next(1) : "\<A-j>"
+inoremap <expr> <A-k> coc#pum#visible() ? coc#pum#prev(1) : "\<A-k>"
