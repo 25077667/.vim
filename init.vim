@@ -21,6 +21,12 @@ Plug 'kien/ctrlp.vim'
 
 Plug 'tomtom/tcomment_vim'
 
+Plug 'iamcco/markdown-preview.nvim'
+
+Plug 'EdenEast/nightfox.nvim'
+
+Plug 'ryanoasis/vim-devicons'
+
 call plug#end()
 
 " Enable those plugins
@@ -28,3 +34,5 @@ call plug#end()
 runtime coc-config.vim
 runtime ctrlp.vim
 runtime nerdtree.vim
+
+colorscheme nightfox
