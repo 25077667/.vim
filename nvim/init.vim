@@ -19,7 +19,20 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Ctrl-p
 Plug 'kien/ctrlp.vim'
 
+" Quick comment
 Plug 'tomtom/tcomment_vim'
+
+Plug 'iamcco/markdown-preview.nvim'
+
+" For theme
+Plug 'EdenEast/nightfox.nvim'
+Plug 'ryanoasis/vim-devicons'
+
+" latex
+Plug 'lervag/vimtex'
+
+" treesitter
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 call plug#end()
 
@@ -28,3 +41,6 @@ call plug#end()
 runtime coc-config.vim
 runtime ctrlp.vim
 runtime nerdtree.vim
+runtime plugins.lua
+
+colorscheme nightfox
